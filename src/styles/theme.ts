@@ -23,13 +23,13 @@ export const tokens = (mode: string) => ({
         },
         primary: {
           100: '#d0d1d5',
-          200: '#a1a4aa',
-          300: '#727680',
+          200: '#a1a4ab',
+          300: '#727681',
           400: '#1F2A40',
-          500: '#141b2b',
-          600: '#101622',
-          700: '#0c101a',
-          800: '#080b11',
+          500: '#141b2d',
+          600: '#101624',
+          700: '#0c101b',
+          800: '#080b12',
           900: '#040509'
         },
         greenAccent: {
@@ -80,14 +80,14 @@ export const tokens = (mode: string) => ({
         },
         primary: {
           100: '#040509',
-          200: '#080b11',
-          300: '#0c101a',
-          400: '#f2f0f0',
-          500: '#141b2b',
-          600: '#434955',
-          700: '#727680',
-          900: '#a1a4aa',
-          800: '#d0d1d5'
+          200: '#080b12',
+          300: '#0c101b',
+          400: '#f2f0f0', // manually changed
+          500: '#141b2d',
+          600: '#1F2A40',
+          700: '#727681',
+          800: '#a1a4ab',
+          900: '#d0d1d5'
         },
         greenAccent: {
           100: '#0f2922',
@@ -204,7 +204,7 @@ export const themeSettings: ThemeSettings = mode => {
         ? {
             // palette values for dark mode
             primary: {
-              main: colors.primary[500]
+              main: colors.primary[800]
             },
             secondary: {
               main: colors.greenAccent[500]
@@ -221,7 +221,7 @@ export const themeSettings: ThemeSettings = mode => {
         : {
             // palette values for light mode
             primary: {
-              main: colors.primary[100]
+              main: colors.primary[400]
             },
             secondary: {
               main: colors.greenAccent[500]

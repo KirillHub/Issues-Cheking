@@ -8,7 +8,7 @@ import {
 import Project from "./Project";
 import PageError from "./shared/component/PageError";
 import { createBrowserHistory } from "history";
-import IssueCard from "./Project/Issue";
+import ProjectBoardListIssue from "./Project/Issue";
 
 const history = createBrowserHistory();
 
@@ -28,7 +28,7 @@ const routes: RouteObject[] = [
   },
   {
     path: "/issuer-card",
-    element: <IssueCard />
+    element: <ProjectBoardListIssue />
   },
   {
     path: "*",

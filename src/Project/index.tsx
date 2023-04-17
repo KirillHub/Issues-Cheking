@@ -7,19 +7,19 @@ import { tokens, useMode } from "../styles/theme";
 import { IconToggleThemeMode } from "../shared/component/IconToggleThemeMode/IconToggleThemeMode";
 import { useNavigate } from "react-router-dom";
 import { links } from "../router";
+import { ProjectWrapper } from "./styles";
 
 const Project = () => {
   const navigate = useNavigate();
-  const theme = useTheme(); // <Theme & CustomThemeOptions>
+  const theme = useTheme<CustomThemeOptions>(); // <Theme & CustomThemeOptions>
+  const bg = tokens(theme.palette.mode);
   // const [theme, colorMode] = useMode();
   // const colors = tokens(theme.palette.mode);
-  // colors.primary[400]
-  // console.log(theme);
 
-  // const theme = useTheme();
+  console.log(bg.grey[100]);
 
   return (
-    <Box>
+    <ProjectWrapper theme={theme as Theme & CustomThemeOptions}>
       <IconToggleThemeMode />
 
       <a href='#' style={{ color: theme.customMixins.link() }}>
@@ -31,7 +31,7 @@ const Project = () => {
       <Button sx={{ color: "white" }} onClick={() => navigate(links.issueCard)}>
         go to issue card
       </Button>
-    </Box>
+    </ProjectWrapper>
   );
 };
 
